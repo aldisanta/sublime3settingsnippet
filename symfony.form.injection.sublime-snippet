@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Bundle\FrameworkBundle\Routing\Router;
+
+protected \$doctrine;
+protected \$router;
+
+public function __construct(ObjectManager \$doctrine, Router \$router)
+{
+	\$this->doctrine = \$doctrine;
+	\$this->router = \$router;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-forminjection</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

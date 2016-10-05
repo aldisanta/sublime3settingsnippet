@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+\$builder->addEventListener(
+	FormEvents::PRE_SET_DATA,
+	function (FormEvent \$event){
+		\$form = \$event->getForm();
+		\$data = \$event->getData();
+	}
+);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-preset</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

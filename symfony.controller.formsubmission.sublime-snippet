@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+//create form entity to process
+\$form = \$this->_form(new $TM_CURRENT_WORD);
+//handle request (POST), save it to form
+\$form->handleRequest(\$request);
+//check if form is normally submitted (csrf token)
+//check if all fields are valid based from constraint set on Entity
+if (\$form->isSubmitted() && \$form->isValid()) {
+	//get submitted data
+	$rec = $form->getData();
+}
+\$this->validation(\$request, \$form);
+return \$this->redirectToRoute(\$this->section.'_add');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-contsubmit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

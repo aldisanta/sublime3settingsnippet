@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+namespace {{FOLDERNAME}}\\{{BUNDLENAME}}\\Repository;
+
+use Doctrine\\ORM\\EntityRepository;
+use Doctrine\\Common\\Collections\\Criteria;
+
+class $TM_CURRENT_WORD Repository extends EntityRepository
+{
+	public function getEntityBuilder()
+	{
+		return \$this->createQueryBuilder('p')
+					->where('p.isdeleted = 0')
+		;
+	}
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-repoclass</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
