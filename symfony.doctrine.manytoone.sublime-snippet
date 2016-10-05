@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @var \\{{foldername}}\\{{bundle}}\\Entity\\{{table}}
+ *
+ * @ORM\ManyToOne(targetEntity="\\{{foldername}}\\{{bundle}}\\Entity\\{{table}}", inversedBy="{{inversedby}}")
+ * @ORM\JoinColumn(name="$TM_CURRENT_WORD", referencedColumnName="id")
+ */
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-manytoone</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

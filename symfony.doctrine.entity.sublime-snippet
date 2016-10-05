@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * tbl$TM_CURRENT_WORD
+ *
+ * @ORM\Table(name="tbl$TM_CURRENT_WORD")
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass="{{folder}}\{{bundle}}\Repository\\$TM_CURRENT_WORDRepository")
+ */
+class Tbl$TM_CURRENT_WORD extends $TM_CURRENT_WORD
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-entity</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

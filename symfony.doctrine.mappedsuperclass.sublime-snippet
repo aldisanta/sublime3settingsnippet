@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\MappedSuperclass;
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * @MappedSuperclass
+ * @ORM\HasLifecycleCallbacks
+ */
+]]></content>
+	<tabTrigger>sf-mappedsuperclass</tabTrigger>
+	<scope>source.php</scope>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+</snippet>
