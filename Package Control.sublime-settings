@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"DocBlockr",
+		"INI",
+		"jQuery",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"PHP-Twig",
+		"Symfony2 Snippets",
+		"Theme - Soda",
+		"VBScript"
+	]
+}
