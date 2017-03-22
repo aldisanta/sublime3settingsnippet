@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+	var URL = '{{url("")}}';
+	pWidth = 680;
+	pHeight = 700;
+	var iHandle = window.open(URL,'_blank','width=' + pWidth + ',height=' + pHeight + ',toolbar=no,top=100,left=100,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,copyhistory=no,resizable=yes');
+	return true;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>js-popwin</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

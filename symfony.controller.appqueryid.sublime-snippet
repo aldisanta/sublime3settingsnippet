@@ -1,14 +1,10 @@
 <snippet>
 	<content><![CDATA[
-\$form->handleRequest(\$request);
-if (\$form->isSubmitted() && \$form->isValid()) {
-	//get submitted data
-	\$rec = \$form->getData();
-}
-\$this->validation(\$request, \$form);
+$request->getSession()->start();
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>sf-contsubmit</tabTrigger>
+	<tabTrigger>sf-contsession</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

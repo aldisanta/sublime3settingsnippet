@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+\$referer = \$request->headers->get('referer');
+\$referer = str_replace(\$request->getSchemeAndHttpHost(), '', \$referer);
+\$route = \$this->get('router')->match(\$referer);
+\$id = \$request->query->get('qid');
+if ('master_application_document_request' == \$route['_route']) {
+	\$reps = \$this->getDoctrine()->getRepository('ApplicationBundle:Tblmasterapplicationdocrequestquestion');
+} else {
+	\$reps = \$this->getDoctrine()->getRepository('ApplicationBundle:Tblmasterapplicationquestion');
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-routename</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

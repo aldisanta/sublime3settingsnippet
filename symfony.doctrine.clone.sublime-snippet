@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+//clone
+\$temp = \$rec;
+\$dest = new $TM_CURRENT_WORD();
+\$temp_reflect = new \ReflectionObject(\$temp);
+\$dest_reflect = new \ReflectionObject(\$dest);
+
+foreach ($temp_reflect->getProperties() as $temp_reflect_prop) {
+	if ($dest_reflect->hasProperty($temp_reflect_prop->getName())) {
+		if (
+			$temp_reflect_prop->getName() = 'cloneid'
+			|| $temp_reflect_prop->getName() = 'isclone'
+			|| $temp_reflect_prop->getName() = 'createdby'
+			|| $temp_reflect_prop->getName() = 'createddate'
+			|| $temp_reflect_prop->getName() = 'updatedby'
+			|| $temp_reflect_prop->getName() = 'updateddate'
+			|| $temp_reflect_prop->getName() = 'isclone'
+			|| $temp_reflect_prop->getName() = 'id'
+		) {
+			continue;
+		}
+		$temp_reflect_prop->setAccessible(true);
+		$tmp_name = $temp_reflect_prop->getName();
+		$dest_reflect_prop = $dest_reflect->getProperty($temp_reflect_prop->getName());
+		$dest_reflect_prop->setAccessible(true);
+		$dest_reflect_prop->setValue($dest, $temp_reflect_prop->getValue($temp));
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-docclone</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

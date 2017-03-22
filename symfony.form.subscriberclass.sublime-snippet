@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+class $TM_FILENAME implements EventSubscriberInterface
+{
+	public static function getSubscribedEvents()
+	{
+		return [
+			FormEvents::PRE_SET_DATA => 'preSetData',
+			FormEvents::PRE_SUBMIT => 'preSubmit',
+		];
+	}
+
+	public function preSetData(FormEvent \$event)
+	{
+	}
+	
+	public function preSubmit(FormEvent \$event)
+	{
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-formsubscribeclass</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

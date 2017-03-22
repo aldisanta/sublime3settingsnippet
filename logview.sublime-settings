@@ -1,0 +1,4 @@
+// These settings override both User and Default settings for the logview syntax
+{
+	"word_wrap": "auto"
+}

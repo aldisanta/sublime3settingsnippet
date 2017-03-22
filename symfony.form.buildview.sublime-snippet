@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+use Symfony\Component\Form\FormView;
+use Symfony\Component\Form\FormInterface;
+public function buildView(FormView \$view, FormInterface \$form, array \$options)
+{
+	\$view->vars['mode'] = \$options['mode'];
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sf-formbuildview</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
